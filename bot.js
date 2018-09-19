@@ -261,6 +261,29 @@ client.on('message', message => {
     
      });
 
+client.on('message', message => {
+ if(message.content.startsWith(prefix + "تعال")) {
+message.member.voiceChannel.join();
+}
+});
+
+==============================
+client.on('message', msg => {
+
+    if (msg.content == 'hjoin') {
+        if (msg.member.voiceChannel) {
+
+     if (msg.member.voiceChannel.joinable) {
+         msg.member.voiceChannel.join().then(msg.react('✅'));
+     }
+    }
+}
+})
+client.on('ready', () => {
+    client.channels.get("491954035507855361").join();
+    });
+
+
 client.on("message", message => {
  if (message.content === `${prefix}help`) {
   const embed = new Discord.RichEmbed() //by ,$ ReBeL ء , 🔕#4777 'CODES SERVER'
