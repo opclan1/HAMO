@@ -261,13 +261,7 @@ client.on('message', message => {
     
      });
 
-client.on('message', message => {
- if(message.content.startsWith(prefix + "تعال")) {
-message.member.voiceChannel.join();
-}
-});
 
-==============================
 client.on('message', msg => {
 
     if (msg.content == 'hjoin') {
