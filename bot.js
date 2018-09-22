@@ -228,7 +228,7 @@ client.on('message', message => {
         message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
     } else
     
-    if (message.content.startsWith(prefix + 'name')) {
+    if (message.content.startsWith(prefix + 'nic')) {
     if (message.author.id !== '466425075487342615') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
       client.user.setUsername(argresult).then
           message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
